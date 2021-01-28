@@ -1,34 +1,26 @@
 #include<stdio.h>
 
-int action_add(int a, int b) {
-	return a + b;
+//지역변수 전역변수
+
+//{ int a =10; }
+int name = 10;
+
+void func_A();
+
+int main_43() {
+    int a = 0;
+   // int name = -10;
+    printf("name의 값 : %d\n", name);
+    func_A();
+    printf("name의 값 : %d\n", name);
+    return 0;
 }
 
-int Add2(int a, int b) {
-	return 1;
+void func_A() {
+    int a = 10;
+    int b = 20;
+    name = 100;
+    printf("func_A() 함수의 aaa 값 : %d\n", a);
+    printf("func_A() 함수의 bbb 값 : %d\n", b);
+    return;
 }
-
-void printAAA() {
-	printf("AAAA");
-	return;
-}
-
-void action(int a) {
-	int result = 0;
-	if (a == 10) { //a가 10일때만 출력코드가 실행되고 아닐시 프린트 자체를 하지 않겠다.
-		result = a;
-	}
-	else
-	{
-		return;
-	}
-	printf("%d\n", result);
-}
-
-int main(void) {
-	//더하기
-	int add_result = action_add(1, 2);
-	printf("%d\n", Add2(1, 2));
-	return 0;
-}
-

@@ -8,7 +8,7 @@ int int_divide(int x, int y);
 void printBar(); //분단선 출력 함수
 
 //프로그램 스타팅 포인트
-int main(void) {
+int main_3(void) {
 
 	printBar();//함수호출방식
 	printf("\t간단한 계산기");
