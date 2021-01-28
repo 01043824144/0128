@@ -1,28 +1,27 @@
 #include<stdio.h>
 
-//지역변수 전역변수
+//a란 값을 넣으면 a-z, b를 넣으면 b-z출력
+//1.영문 소문자만 가능 a=99 / z=122 (ASCII) 97<=a<=122
+//if~ else
+//2. 입력된 소문자를 시작으로, z까지만 출력
+//for / while / do while
 
-//{ int a =10; }
-void printResult() {
 
-}
+void printChar(char seed);
+
 int main(void) {
-    int i = 0;
-    
-    for (i=1;i<3; i++)
-    {
-   
-        total = total + 1;
-        printf("for 블록안의 변수 total의 값은 %d입니다.\n", total);
-
-    }
+	printChar('d');
+	return 0;
 }
 
-void func_A() {
-    int a = 10;
-    int b = 20;
-    name = 100;
-    printf("func_A() 함수의 aaa 값 : %d\n", a);
-    printf("func_A() 함수의 bbb 값 : %d\n", b);
-    return;
+void printChar(char seed) {
+	if (seed >= 97 && seed <= 122) {//입력문자가 97이상 122이하일때
+		for (; seed <= 122; seed++) {
+			printf("%c", seed);
+		}
+	}
+	else
+	{
+		printf("입력하신 값이 영문 소문자가 아닙니다.\n\n");
+	}
 }
